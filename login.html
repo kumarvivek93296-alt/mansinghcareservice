@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Maansingh Care</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Maansingh Care</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="login-section">
+        <div class="container">
+            <div class="login-container">
+                <div class="login-tabs">
+                    <button class="tab-btn active" onclick="showLogin('client')">Client Login</button>
+                    <button class="tab-btn" onclick="showLogin('worker')">Worker Login</button>
+                </div>
+
+                <!-- Client Login Form -->
+                <div id="clientLogin" class="login-form active">
+                    <h2>Client Login</h2>
+                    <form id="clientLoginForm">
+                        <div class="form-group">
+                            <label for="clientPhone">Phone Number</label>
+                            <input type="tel" id="clientPhone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send OTP</button>
+                    </form>
+                    <p class="signup-link">New user? <a href="#" onclick="showSignup()">Sign up</a></p>
+                </div>
+
+                <!-- Worker Login Form -->
+                <div id="workerLogin" class="login-form">
+                    <h2>Worker Login</h2>
+                    <form id="workerLoginForm">
+                        <div class="form-group">
+                            <label for="workerId">Worker ID</label>
+                            <input type="text" id="workerId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="workerPassword">Password</label>
+                            <input type="password" id="workerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="signupForm" class="login-form">
+                    <h2>Client Signup</h2>
+                    <form id="clientSignupForm">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Maansingh Care Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showLogin(type) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('clientLogin').classList.remove('active');
+            document.getElementById('workerLogin').classList.remove('active');
+            document.getElementById('signupForm').classList.remove('active');
+            
+            if (type === 'client') {
+                document.getElementById('clientLogin').classList.add('active');
+            } else {
+                document.getElementById('workerLogin').classList.add('active');
+            }
+        }
+
+        function showSignup() {
+            document.getElementById('clientLogin').classList.remove('active');
+            document.getElementById('workerLogin').classList.remove('active');
+            document.getElementById('signupForm').classList.add('active');
+        }
+
+        // Handle form submissions
+        document.getElementById('clientLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('OTP sent to your phone!');
+            window.location.href = 'client-dashboard.html';
+        });
+
+        document.getElementById('workerLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login successful!');
+            window.location.href = 'worker-dashboard.html';
+        });
+
+        document.getElementById('clientSignupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Signup successful! Please login.');
+            showLogin('client');
+        });
+    </script>
+</body>
+</html>
