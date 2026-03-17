@@ -1,39 +1,35 @@
-<!DOCTYPE html>
+                <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maansingh Care Services - Trusted Nursing Care at Your Doorstep</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Maansingh Care Services - Trusted Nursing Care</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <h1>Maansingh Care</h1>
-            </div>
+            <h1 class="logo">Maansingh Care</h1>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#book" class="btn-book">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section with Image -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero-bg.jpg');">
         <div class="container">
-            <div class="hero-content">
-                <h1>Trusted Nursing Care at Your Doorstep</h1>
-                <p class="subheading">Verified GDA & Nursing Staff for elderly care, patient care & home support</p>
-                <div class="hero-buttons">
-                    <a href="book-service.html" class="btn btn-primary">📞 Book Service</a>
-                    <a href="join-worker.html" class="btn btn-secondary">👨‍⚕️ Join as Worker</a>
-                </div>
+            <h1>Trusted Nursing Care at Your Doorstep</h1>
+            <p>Verified GDA & Nursing Staff for elderly care, patient care & home support</p>
+            <div class="hero-buttons">
+                <a href="#book" class="btn btn-primary">📞 Book Service</a>
+                <a href="#join" class="btn btn-secondary">👨‍⚕️ Join as Worker</a>
             </div>
         </div>
     </section>
@@ -42,62 +38,138 @@
     <section class="trust-strip">
         <div class="container">
             <div class="trust-items">
-                <div class="trust-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Verified Staff</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Background Checked</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-headset"></i>
-                    <span>24x7 Support</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-rupee-sign"></i>
-                    <span>Affordable Pricing</span>
-                </div>
+                <div class="trust-item"><i class="fas fa-check-circle"></i> Verified Staff</div>
+                <div class="trust-item"><i class="fas fa-shield-alt"></i> Background Checked</div>
+                <div class="trust-item"><i class="fas fa-headset"></i> 24x7 Support</div>
+                <div class="trust-item"><i class="fas fa-rupee-sign"></i> Affordable Pricing</div>
             </div>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="services-preview">
+    <!-- Services Section with Images and Pricing -->
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-user-plus"></i>
+                    <img src="assets/images/elderly-care.jpg" alt="Elderly Care">
                     <h3>Elderly Care</h3>
-                    <p>24/7 care and support for your loved ones</p>
+                    <ul>
+                        <li>✓ Daily help & assistance</li>
+                        <li>✓ Medicine reminder</li>
+                        <li>✓ Walking support</li>
+                    </ul>
+                    <p class="price">💰 ₹500/day – ₹15000/month</p>
+                    <a href="#book" class="btn-book-service">Book Now →</a>
                 </div>
+                
                 <div class="service-card">
-                    <i class="fas fa-hospital-user"></i>
+                    <img src="assets/images/home-nursing.jpg" alt="Home Nursing">
                     <h3>Home Nursing</h3>
-                    <p>Professional nursing care at home</p>
+                    <ul>
+                        <li>✓ Professional nursing care</li>
+                        <li>✓ Wound care & dressing</li>
+                        <li>✓ Medication management</li>
+                    </ul>
+                    <p class="price">💰 ₹600/day – ₹18000/month</p>
+                    <a href="#book" class="btn-book-service">Book Now →</a>
                 </div>
+                
                 <div class="service-card">
-                    <i class="fas fa-procedures"></i>
+                    <img src="assets/images/patient-care.jpg" alt="Patient Care">
                     <h3>Patient Care</h3>
-                    <p>Post-surgery and chronic illness care</p>
+                    <ul>
+                        <li>✓ Post-surgery care</li>
+                        <li>✓ Chronic illness management</li>
+                        <li>✓ Bedside assistance</li>
+                    </ul>
+                    <p class="price">💰 ₹550/day – ₹16000/month</p>
+                    <a href="#book" class="btn-book-service">Book Now →</a>
                 </div>
+                
                 <div class="service-card">
-                    <i class="fas fa-baby"></i>
+                    <img src="assets/images/baby-care.jpg" alt="Baby Care">
                     <h3>Baby Care</h3>
-                    <p>Expert care for your little ones</p>
+                    <ul>
+                        <li>✓ Newborn care</li>
+                        <li>✓ Feeding assistance</li>
+                        <li>✓ Baby massage</li>
+                    </ul>
+                    <p class="price">💰 ₹450/day – ₹13000/month</p>
+                    <a href="#book" class="btn-book-service">Book Now →</a>
                 </div>
-            </div>
-            <div class="text-center">
-                <a href="services.html" class="btn btn-outline">View All Services →</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Founder Section - Apna Photo Yahaan Lagega -->
+    <section id="about" class="founder">
+        <div class="container">
+            <div class="founder-card">
+                <img src="assets/images/founder.jpg" alt="Maansingh - Founder" class="founder-photo">
+                <div class="founder-info">
+                    <h2>Meet Our Founder</h2>
+                    <h3>Maansingh</h3>
+                    <p class="founder-title">Founder & CEO, Maansingh Care Services</p>
+                    <p class="founder-message">"Hum sirf service nahi, zimmedari dete hain ❤️"</p>
+                    <p>Ek vision ke saath shuru kiya yeh safar - har ghar tak trusted nursing care pahunchana aur rozgaar create karna. Powered by Tricolor Trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="book" class="booking">
+        <div class="container">
+            <h2>Book a Service</h2>
+            <form id="bookingForm" class="booking-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="City" required>
+                <select required>
+                    <option value="">Select Service</option>
+                    <option>Elderly Care</option>
+                    <option>Home Nursing</option>
+                    <option>Patient Care</option>
+                    <option>Baby Care</option>
+                </select>
+                <select required>
+                    <option value="">Duration</option>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+                <textarea placeholder="Full Address" rows="3" required></textarea>
+                <button type="submit" class="btn-submit">Submit Booking → WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Worker Join Form -->
+    <section id="join" class="join-worker">
+        <div class="container">
+            <h2>Join Our Team</h2>
+            <form class="worker-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="text" placeholder="City" required>
+                <input type="number" placeholder="Experience (years)" required>
+                <select required>
+                    <option value="">ID Proof Type</option>
+                    <option>Aadhar Card</option>
+                    <option>Voter ID</option>
+                    <option>Driving License</option>
+                </select>
+                <input type="text" placeholder="ID Proof Number" required>
+                <button type="submit" class="btn-submit">Apply Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials with Photos -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
+            <h2>What Our Clients Say</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -113,13 +185,28 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-phone"></i> +91 98870 98898</p>
+            <p><i class="fas fa-envelope"></i> maansingh@gmail.com</p>
+            <a href="https://wa.me/919887098988" class="btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Maansingh Care Services. All rights reserved.</p>
+            <p>© 2024 Maansingh Care Services. All rights reserved. Powered by Tricolor Trends</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will contact you soon.');
+            window.open('https://wa.me/919887098988?text=New Service Booking', '_blank');
+        });
+    </script>
 </body>
 </html>
